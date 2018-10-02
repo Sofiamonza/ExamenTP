@@ -1,4 +1,7 @@
 # ExamenTP
+[![Build Status](https://travis-ci.org/Sofiamonza/ExamenTP.svg?branch=master)](https://travis-ci.org/Sofiamonza/ExamenTP)
+[![Coverage Status](https://coveralls.io/repos/github/Sofiamonza/ExamenTP/badge.svg?branch=master)](https://coveralls.io/github/Sofiamonza/ExamenTP?branch=master)
+
 poder crear multiples temas, entre 3 a 8 temas. que genere multiples temas
 que me guarde cual es la respuesta correcta proque este sistema mezcla las opciones, mezcvla als preguntas y las consignas. Este sistem ame tiene que generar dos copias, una sin respuestas correctas y otra que si.
 Hacer unsistema que tome esa entrada yml y que aggarre un subconjunto de las preguntas. Que las mezcle y mescle las opciones y me genere tantos temas como yo quiera. 

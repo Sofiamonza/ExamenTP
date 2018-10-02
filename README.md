@@ -36,4 +36,6 @@
 
 border 1px solid black
 
-
+## Anotaciones.
+- arrancar primero sin twig
+- <div clas="questions"> -> en esta linea esta el grid.

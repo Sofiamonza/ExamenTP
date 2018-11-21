@@ -35,7 +35,7 @@
 - Como los div son contenedores genéricos. Si yo los muestros a todos como display grid puedo hacer 2 columnas
 
 border 1px solid black
-
+ 
 ## Anotaciones.
 - arrancar primero sin twig
 - //<!– //<div clas="questions">— >  -> en esta linea esta el grid.

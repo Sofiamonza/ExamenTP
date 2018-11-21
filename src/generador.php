@@ -1,6 +1,6 @@
 <?php
 
-class Generador /*implements GeneradorInterface*/ {
+class Generador {
     protected $cant_preguntas; 
     protected $preguntas = array();
     protected $respuestas_total;
@@ -17,25 +17,17 @@ class Generador /*implements GeneradorInterface*/ {
     */
     public function MezclarPreguntas(){
         shuffle($this->preguntas);
-        return $this->preguntas;
-    }
-
-    /*  mezcla las respuestas de una pregunta del examen
-    *   retorna el examen con las respuestas mezcladas
-    *
-    */
-    public function MezclarRespuestas(){
-       shuffle($this->preguntas['respuestas_correctas']);
-       shuffle($this->preguntas['respuestas_incorrectas']);
-        return $this->preguntas;
+      
     }
 
     /*  
     *  Devuelve todas las respuestas, sean correctas o incorrectas
-    *
+    *   mezcla las respuestas totales de una pregunta del examen
+    *   retorna el examen con las respuestas mezcladas
     */
     public function RespuestasTotales(){
         $this->respuestas_total = array_merge($this->preguntas['respuestas_correctas'], $this->preguntas['respuestas_incorrectas']);
+        shuffle($this->respuestas_total);
         return $this->respuestas_total;
     }
 
@@ -51,14 +43,9 @@ class Generador /*implements GeneradorInterface*/ {
         return array_slice($this->pregunta, 0, $this->cant_preguntas);                                 
     }
 
-    public function RespuestasOpcionales(){
-        if(!array_key_exists('ocultar_opcion_todas_las_anteriores', $this->pregunta))
-        {
-           
-        }
-        else{
+    public function CrearTema(){
 
-        }
+
     }
 
 } 

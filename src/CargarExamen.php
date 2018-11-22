@@ -8,7 +8,6 @@ use Symfony\Component\Yaml\Yaml;
 $yaml = Yaml::parseFile('material/preguntas.yml');
 $yaml = $yaml['preguntas'];
 
-
 $cantPreguntas = 12;
 $generador = new Generator($yaml, $cantPreguntas);
 

@@ -21,11 +21,12 @@ class Generador {
         for($i=0; $i<$cant_preguntas; $i++ )
         {
             if($this->preguntas[$i]['respuestas_correctas'] == []){
-                array_push($this->preguntas[$i]['respuestas_correctas'], 'Ninguna de las anteriores');
+                $this->preguntas[$i]['respuestas_correctas'] = 'Ninguna de las anteriores';
             }
 
             if($this->preguntas[$i]['respuestas_incorrectas'] == []){
-                array_push($this->preguntas[$i]['respuestas_correctas'], 'Todas las anteriores');
+                $this->preguntas[$i]['respuestas_incorrectas'] = array_merge($pregunta[$i]['respuestas_correctas'], $pregunta[$i]['respuestas_incorrectas']);
+                $this->preguntas[$i]['respuestas_correctas'] = 'Todas las anteriores';
             }
         }
     }
@@ -50,7 +51,7 @@ class Generador {
     }
 
     /*  
-    *  Devuelve la pregunta
+    *  Devuelve un array de todas las descripciones
     *
     */
     public function Pregunta($cant_preguntas){
@@ -93,5 +94,8 @@ class Generador {
 
     }
 
+    public function MostrarArrayPreguntas(){
+        return $this->preguntas;
+    }
 
 } 

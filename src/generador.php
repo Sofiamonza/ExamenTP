@@ -13,6 +13,10 @@ class Generador {
         $this->cant=$cant_preguntas;
     }
 
+    /*  
+    *  Agrega las respuestas Ninguna de las anteriores y Todas las anteriores
+    *
+    */
     public function RespuestasGenerales($cant_preguntas){
         for($i=0; $i<$cant_preguntas; $i++ )
         {
@@ -59,13 +63,21 @@ class Generador {
         return $array;
     } 
 
+    /*  
+    *  Elimina preguntas dejando la cantidad de preguntas deseadas
+    *
+    */
     public function CantPreguntas(){
         return array_slice($this->preguntas, 0, $this->cant_preguntas);                                 
     }
 
+    /*  
+    *  Crea un tema, generando una plantilla html
+    *
+    */
     public function CrearTema($nro_tema, Plantilla $html){
-        $this->preguntas = $this->CantPreguntas();
         $this->MezclarPreguntas();
+        $this->preguntas = $this->CantPreguntas();
         $this->RespuestasGenerales($this->cant_preguntas);
 
         $this->$array_descripcion = $this->Pregunta($this->cant_preguntas);

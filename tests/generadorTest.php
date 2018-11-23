@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 class generadorTest extends TestCase{
     
     public function testRespuestasGenerales(){
-        $yaml = Yaml::parseFile('material/preguntas.yml');
+        $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
         $cantPreguntas = 10;
         $generador = new Generator($yaml, $cantPreguntas);
@@ -32,7 +32,7 @@ class generadorTest extends TestCase{
     }
 
     public function testMezclarPreguntas(){
-        $yaml = Yaml::parseFile('material/preguntas.yml');
+        $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
 
         $generador = new Generator($yaml, $cantPreguntas);
@@ -44,7 +44,7 @@ class generadorTest extends TestCase{
 
     
     public function testRespuestasTotales(){
-        $yaml = Yaml::parseFile('material/preguntas.yml');
+        $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
 
         $aux = $generador->MostrarArrayPreguntas();

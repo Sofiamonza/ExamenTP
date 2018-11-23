@@ -11,7 +11,7 @@ class GeneradorTest extends TestCase{
         $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
       
-        $cantidad_preguntas=10;
+        $cantidad_preguntas= 10;
         $generador = new Generador($yaml, $cantidad_preguntas);
 
         $generador->RespuestasGenerales();
@@ -57,7 +57,7 @@ class GeneradorTest extends TestCase{
         $aux = $generador->MostrarArrayPreguntas();
         $aux2= array_merge($yaml[0]['respuestas_correctas'],$yaml[0]['respuestas_incorrectas']);
 
-        $this->assertEquals($aux2, $generador->RespuestasTotales($aux[0]));
+        $this->assertEquals($aux2, $generador->RespuestasTotales($aux[0]['preguntas']));
     }
 
     

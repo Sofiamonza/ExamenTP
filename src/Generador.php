@@ -10,7 +10,7 @@ class Generador {
     protected $array_descripcion= array();
 
 
-    public function __construct($yaml, $cant = 10){
+    public function __construct($yaml, $cant){
         $this->preguntas=$yaml;
         $this->$cant_preguntas=$cant;
     }

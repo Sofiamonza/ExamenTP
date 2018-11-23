@@ -12,7 +12,7 @@ class Generador {
 
     public function __construct($yaml, $cant = 10){
         $this->preguntas=$yaml;
-        $this->cant=$cant_preguntas;
+        $this->$cant_preguntas=$cant;
     }
 
     /*  

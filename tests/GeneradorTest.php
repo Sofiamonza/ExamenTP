@@ -11,14 +11,15 @@ class GeneradorTest extends TestCase{
         $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
       
-        $generador = new Generador($yaml, 10);
+        $cantidad_preguntas=10;
+        $generador = new Generador($yaml, $cantidad_preguntas);
 
         $generador->RespuestasGenerales();
 
         $aux = $generador->MostrarArrayPreguntas();
         $bandera = false;
 
-        for($i=0; $i < 10; $i++ )
+        for($i=0; $i < $cant; $i++ )
         {
             if ($aux [$i]['respuestas_correctas']== 'Todas las anteriores')
             {

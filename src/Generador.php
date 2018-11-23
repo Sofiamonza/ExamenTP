@@ -19,8 +19,8 @@ class Generador {
     *  Agrega las respuestas Ninguna de las anteriores y Todas las anteriores
     *
     */
-    public function RespuestasGenerales($cant_preguntas){
-        for($i=0; $i<$cant_preguntas; $i++ )
+    public function RespuestasGenerales(){
+        for($i=0; $i<$this->$cant_preguntas; $i++ )
         {
             if($this->preguntas[$i]['respuestas_correctas'] == []){
                 $this->preguntas[$i]['respuestas_correctas'] = 'Ninguna de las anteriores';
@@ -53,11 +53,11 @@ class Generador {
     }
 
     /*  
-    *  Devuelve un array de todas las descripciones
+    *  Devuelve un array con todas las descripciones
     *
     */
-    public function Pregunta($cant_preguntas){
-        for($i=0; $i<$cant_preguntas; $i++ )
+    public function Pregunta(){
+        for($i=0; $i<$this->$cant_preguntas; $i++ )
         {
             $array[$i]= $this->preguntas[$i]['descripcion'];
           

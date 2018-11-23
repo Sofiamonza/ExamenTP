@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 
-class generadorTest extends TestCase{
+class GeneradorTest extends TestCase{
     
     public function testRespuestasGenerales(){
         $yaml = Yaml::parseFile('./src/material/preguntas.yml');

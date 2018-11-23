@@ -10,9 +10,9 @@ class Generador {
     protected $array_descripcion= array();
 
 
-    public function __construct($yaml, $cantidad_preguntas){
+    public function __construct($yaml, $cant_preguntas){
         $this->preguntas=$yaml;
-        $this->$cant_preguntas=$cantidad_preguntas;
+        $this->$cant_preguntas=$cant_preguntas;
     }
 
     /*  

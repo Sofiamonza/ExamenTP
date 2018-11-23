@@ -9,7 +9,7 @@ $yaml = Yaml::parseFile('material/preguntas.yml');
 $yaml = $yaml['preguntas'];
 
 $cantPreguntas = 12;
-$generador = new Generator($yaml, $cantPreguntas);
+$generador = new Generador($yaml, $cantPreguntas);
 
 $generador->crearTema(1); //crea tema 1
 

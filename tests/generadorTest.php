@@ -9,7 +9,7 @@ class generadorTest extends TestCase{
         $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
         $cantPreguntas = 10;
-        $generador = new Generator($yaml, $cantPreguntas);
+        $generador = new Generador($yaml, $cantPreguntas);
 
         $generador->RespuestasGenerales();
 
@@ -35,7 +35,7 @@ class generadorTest extends TestCase{
         $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
 
-        $generador = new Generator($yaml, $cantPreguntas);
+        $generador = new Generador($yaml, $cantPreguntas);
 
         $this->assertTrue($generador->MezclarPreguntas());
 

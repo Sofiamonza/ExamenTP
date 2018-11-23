@@ -19,7 +19,7 @@ class GeneradorTest extends TestCase{
         $aux = $generador->MostrarArrayPreguntas();
         $bandera = false;
 
-        for($i=0; $i < $cant; $i++ )
+        for($i=0; $i < $cantidad_preguntas; $i++ )
         {
             if ($aux [$i]['respuestas_correctas']== 'Todas las anteriores')
             {

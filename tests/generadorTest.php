@@ -1,5 +1,7 @@
 <?php
 
+namespace ExamenTP;
+
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Yaml;
 

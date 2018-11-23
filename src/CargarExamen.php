@@ -1,5 +1,6 @@
 <?php
 
+namespace ExamenTP;
 
 require '../vendor/autoload.php';
 

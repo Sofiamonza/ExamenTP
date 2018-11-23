@@ -1,5 +1,7 @@
 <?php
 
+namespace ExamenTP;
+
 class Plantilla {
 
 

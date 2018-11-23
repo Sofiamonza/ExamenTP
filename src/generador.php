@@ -1,5 +1,7 @@
 <?php
 
+namespace ExamenTP;
+
 class Generador {
     protected $cant_preguntas; 
     protected $preguntas = array();

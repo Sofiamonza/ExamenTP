@@ -62,7 +62,21 @@ class GeneradorTest extends TestCase{
 
     
     public function testPregunta(){
-        
+        $yaml = Yaml::parseFile('./src/material/preguntas.yml');
+        $yaml = $yaml['preguntas'];
+
+        $cantPreguntas = 10;
+        $generador = new Generador($yaml, $cantPreguntas);
+
+	$aux = $generador->MostrarArrayPreguntas();
+
+	for($i=0; $i<$this->$cantPreguntas; $i++ )
+        {
+            $array[$i]= $aux[$i]['descripcion'];
+          
+        }
+
+
     } 
 
     

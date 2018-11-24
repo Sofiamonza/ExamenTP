@@ -2,10 +2,6 @@
 
 namespace ExamenTP;
 
-use Twig_Environment;
-use Twig_Loader_Filesystem;
-require_once '../vendor/autoload.php';
-
 
 class Generador {
     protected $cant_preguntas; 

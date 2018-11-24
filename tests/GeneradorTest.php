@@ -55,7 +55,7 @@ class GeneradorTest extends TestCase{
         $aux = $generador->MostrarArrayPreguntas();
         $aux2= array_merge($yaml[0]['respuestas_correctas'],$yaml[0]['respuestas_incorrectas']);
 
-        $this->assertEquals($aux2, $generador->RespuestasTotales($aux[0]['preguntas']));
+        $this->assertEquals($aux2, $generador->RespuestasTotales($aux[0]));
     }
 
     
@@ -68,7 +68,7 @@ class GeneradorTest extends TestCase{
 
 	$aux = $generador->MostrarArrayPreguntas();
 
-	for($i=0; $i<$this->$cantPreguntas; $i++ )
+	for($i=0; $i < $cantPreguntas; $i++ )
         {
             $array[$i]= $aux[$i]['descripcion'];
           

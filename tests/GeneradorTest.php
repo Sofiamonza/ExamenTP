@@ -41,9 +41,7 @@ class GeneradorTest extends TestCase{
         $cantPreguntas = 10;
         $generador = new Generador($yaml, $cantPreguntas);
 
-        $this->assertTrue($generador->MezclarPreguntas());
-
-        $this->assertNotEquals($yaml, $generador->MostrarArrayPreguntas());
+        $this->assertNotEquals($yaml, $generador->MezclarPreguntas());
     }
 
     

@@ -17,7 +17,7 @@ class Generador {
 
     public function __construct($yaml, $cant_preguntas){
         $this->preguntas=$yaml;
-        $this->$cant_preguntas=$cant_preguntas;
+        $this->cant_preguntas=$cant_preguntas;
     }
 
     /*  
@@ -25,14 +25,14 @@ class Generador {
     *
     */
     public function RespuestasGenerales(){
-        for($i=0; $i<$this->$cant_preguntas; $i++ )
+        for($i=0; $i < $this->cant_preguntas; $i++ )
         {
             if($this->preguntas[$i]['respuestas_correctas'] == []){
                 $this->preguntas[$i]['respuestas_correctas'] = 'Ninguna de las anteriores';
             }
 
             if($this->preguntas[$i]['respuestas_incorrectas'] == []){
-                $this->preguntas[$i]['respuestas_incorrectas'] = array_merge($pregunta[$i]['respuestas_correctas'], $pregunta[$i]['respuestas_incorrectas']);
+                $this->preguntas[$i]['respuestas_incorrectas'] = array_merge($this->preguntas[$i]['respuestas_correctas'], $this->preguntas[$i]['respuestas_incorrectas']);
                 $this->preguntas[$i]['respuestas_correctas'] = 'Todas las anteriores';
             }
         }
@@ -44,6 +44,7 @@ class Generador {
     */
     public function MezclarPreguntas(){
         shuffle($this->preguntas);
+        return $this->preguntas;
     }
 
     /*  
@@ -62,7 +63,7 @@ class Generador {
     *
     */
     public function Pregunta(){
-        for($i=0; $i<$this->$cant_preguntas; $i++ )
+        for($i=0; $i< $this->cant_preguntas; $i++ )
         {
             $array[$i]= $this->preguntas[$i]['descripcion'];
           
@@ -84,11 +85,11 @@ class Generador {
     *
     */
     public function CrearTema($nro_tema, Plantilla $html){
-        $this->MezclarPreguntas();
+        $this->preguntas = $this->MezclarPreguntas();
         $this->preguntas = $this->CantPreguntas();
         $this->RespuestasGenerales($this->cant_preguntas);
 
-        $this->$array_descripcion = $this->Pregunta($this->cant_preguntas);
+        $this->array_descripcion = $this->Pregunta($this->cant_preguntas);
 
         for($i=0; $i < $this->cant_preguntas; $i++)
         {
@@ -96,8 +97,8 @@ class Generador {
         }
 
 
-        $html->plantilla_alumno($this->$cant_preguntas, $this->$array_respuestas, $this->$array_descripcion, $nro_tema);
-        $html->plantilla_profesor($this->preguntas, $this->$cant_preguntas, $nro_tema);
+        $html->plantilla_alumno($this->cant_preguntas, $this->array_respuestas, $this->array_descripcion, $nro_tema);
+        $html->plantilla_profesor($this->preguntas, $this->cant_preguntas, $nro_tema);
 
     }
 

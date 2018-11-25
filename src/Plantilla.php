@@ -134,8 +134,9 @@ class Plantilla {
 		
 			"<div class='question'>
 				<div class='number'>" echo $i"</div>
-				
+				"echo preguntas[$i]['respuestas_correctas']"
 			<div class='description'>"echo $array_descripcion"</div>"
+				
 				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
 					"<div class='options short'>
 					<div class='option'>"echo $array_respuestas"</div>

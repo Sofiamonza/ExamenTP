@@ -100,6 +100,12 @@ class GeneradorTest extends TestCase{
 
     //No sé sie ste test es necesario
     public function testMostrarArrayPreguntas(){
+        $yaml = Yaml::parseFile('./src/material/preguntas.yml');
+        $yaml = $yaml['preguntas'];
 
+        $cantPreguntas = 10;
+        $generador = new Generador($yaml, $cantPreguntas);
+
+	$this->assertEquals($yaml,$generador->MostrarArrayPreguntas());
     }
 }

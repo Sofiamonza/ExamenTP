@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/Sofiamonza/ExamenTP.svg?branch=master)](https://travis-ci.org/Sofiamonza/ExamenTP)
 [![Coverage Status](https://coveralls.io/repos/github/Sofiamonza/ExamenTP/badge.svg?branch=master)](https://coveralls.io/github/Sofiamonza/ExamenTP?branch=master)
 
+#Integrantes: Gilio, Monza.
+
 # ExamenTP: Generador de exámenes multiple-choice
 
 - Genera múltiples temas.

@@ -59,7 +59,7 @@ class GeneradorTest extends TestCase{
     }
 
     
-    public function testPregunta(){
+    public function testDescripciones(){
         $yaml = Yaml::parseFile('./src/material/preguntas.yml');
         $yaml = $yaml['preguntas'];
 
@@ -74,7 +74,7 @@ class GeneradorTest extends TestCase{
           
         }
 
-
+        $this->assertEquals($array, $generador->Descripciones());
     } 
 
     

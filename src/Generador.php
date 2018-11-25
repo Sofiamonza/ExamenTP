@@ -50,9 +50,9 @@ class Generador {
     */
     public function RespuestasTotales($pregunta){
         $this->respuestas_total = array_merge($pregunta['respuestas_correctas'], $pregunta['respuestas_incorrectas']);
-        shuffle($this->respuestas_total);
         return $this->respuestas_total;
     }
+
 
     /*  
     *  Devuelve un array con todas las descripciones
@@ -88,8 +88,8 @@ class Generador {
         $this->array_descripcion = $this->Pregunta($this->cant_preguntas);
 
         for($i=0; $i < $this->cant_preguntas; $i++)
-        {
-            $this->array_respuestas[$i]= $this->RespuestasTotales($this->preguntas[$i]);
+        {   //con el shuffle mezclo las respuestas totales
+            $this->array_respuestas[$i]= shuffle($this->RespuestasTotales($this->preguntas[$i]));
         }
 
 

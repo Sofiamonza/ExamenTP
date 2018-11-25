@@ -6,32 +6,10 @@
 
 - Mezcla las opciones y las consignas.
 
-- Este sistema me tiene que generar dos copias por cada tema, una sin la resolución y otra con las respuestas correctas.
+- Este sistema genera dos copias por cada tema, una sin la resolución y otra con las respuestas correctas.
 
 - Crear un conjunto grande de preguntas, del cual voy a sacar para los diferentes temas.
 
 - Agrega las opciones "Todas las anteriores" y "Ninguna de las anteriores" de ser necesario.
 
-## Lo que necesitamos y lo que debe haber.
 
-- Objeto tipo examen obj, tipo pregunta y otro html.
-
-- php
-
-- Synfony Yaml -> permite leer archivos yml
-
-- twig -> una biblioteca que le permite escribir una especia de plantilla que se convierte en html
-
-- css grid
-
-<b>solo tenemos que generar el html, no el pdf</b>
-
-- Si hay un corchete vacio es porque ninguna es la correcta-> osea es: Ninguna de las anteriores
-
-- Como los div son contenedores genéricos. Si yo los muestros a todos como display grid puedo hacer 2 columnas
-
-border 1px solid black
- 
-## Anotaciones.
-- arrancar primero sin twig
-- //<!– //<div clas="questions">— >  -> en esta linea esta el grid.

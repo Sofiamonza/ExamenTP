@@ -54,18 +54,19 @@ class Plantilla {
 		<div class='header'>
 		  <strong>Nombre y Apellido _____________________________________________ </strong>
 		  <strong>Evaluación número</strong>
-		  <strong>Tema:" $nro_tema " </strong>
+		  <strong>Tema:". $nro_tema ." </strong>
 		</div>
-		<div class='questions'>
-		  "for (int $i,$i<$cant_preguntas, $i++){
+		<div class='questions'>";
+
+		  for (int $i,$i<$cant_preguntas, $i++){
 		
 			"<div class='question'>
-				<div class='number'>" echo $i"</div>
+				<div class='number'>" echo $i;"</div>
 				
-			<div class='description'>"echo $array_descripcion"</div>"
+			<div class='description'>"echo $array_descripcion;"</div>"
 				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
 					"<div class='options short'>
-					<div class='option'>"echo $array_respuestas"</div>
+					<div class='option'>"echo $array_respuestas;"</div>
 					</div>"
 				}
 			
@@ -74,7 +75,6 @@ class Plantilla {
 		"</div> 
 	  </body>
 	</html>"
-		
 	}
 
     public function plantilla_profesor($preguntas, $cant_preguntas, $nro_tema){
@@ -127,19 +127,19 @@ class Plantilla {
 		<div class='header'>
 		  <strong>Nombre y Apellido _____________________________________________ </strong>
 		  <strong>Evaluación número</strong>
-		  <strong>Tema:" $nro_tema " </strong>
+		  <strong>Tema:" .$nro_tema." </strong>
 		</div>
-		<div class='questions'>
-		  "for (int $i,$i<$cant_preguntas, $i++){
+		<div class='questions'>;"
+		  for (int $i,$i<$cant_preguntas, $i++){
 		
 			"<div class='question'>
-				<div class='number'>" echo $i"</div>
-				"echo preguntas[$i]['respuestas_correctas']"
-			<div class='description'>"echo $array_descripcion"</div>"
+				<div class='number'>" echo $i;"</div>
+				"echo preguntas[$i]['respuestas_correctas'];"
+			<div class='description'>"echo $array_descripcion;"</div>"
 				
 				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
 					"<div class='options short'>
-					<div class='option'>"echo $array_respuestas"</div>
+					<div class='option'>"echo $array_respuestas;"</div>
 					</div>"
 				}
 			

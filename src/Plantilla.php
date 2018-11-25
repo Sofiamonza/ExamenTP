@@ -5,97 +5,147 @@ class Plantilla {
 
 
     public function plantilla_alumno($cant_preguntas, $array_respuestas, $array_descripcion, $nro_tema){
-		<html>
- echo "<html>
-  <head>
-    <title>Exam</title>
-    <meta charset='utf-8'>
-    <meta name='description' content="">
-    <meta name=viewport content='width=device-width, initial-scale=1'>
+	 echo "<html>
+	  <head>
+		<title>Exam</title>
+		<meta charset='utf-8'>
+		<meta name='description' content="">
+		<meta name=viewport content='width=device-width, initial-scale=1'>
 
-    <style>
-      .question {
-          border: 1px solid gray;
-          padding: 0.3em;
-      }
-      .number {
-          float: left;
-          margin-right: 0.5em;
-          font-weight: bold;
-      }
-      .options {
-          display: flex;
-          flex-direction: column;
-      }
-      .short {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 1em;
-      }
-      .questions {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 1em 1em;
-      }
-      .header {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 1em;
-      }
-      .description {
-          margin-bottom: 0.5em;
-          font-weight: bold;
-      }
-      body {
-        font-size: 12px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class='header'>
-      <strong>Nombre y Apellido _____________________________________________ </strong>
-      <strong>Evaluación número</strong>
-	  <strong>Tema:" $nro_tema " </strong>
-    </div>
-    <div class='questions'>
-      "for (int $i,$i<$cant_preguntas, $i++){
-	
-		"<div class='question'>
-			<div class='number'>" echo $i"</div>
-      		
-		<div class='description'>"echo $array_descripcion"</div>"
-			foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
-				"<div class='options short'>
-				<div class='option'>"echo $array_respuestas"</div>
-				</div>"
-			}
+		<style>
+		  .question {
+			  border: 1px solid gray;
+			  padding: 0.3em;
+		  }
+		  .number {
+			  float: left;
+			  margin-right: 0.5em;
+			  font-weight: bold;
+		  }
+		  .options {
+			  display: flex;
+			  flex-direction: column;
+		  }
+		  .short {
+			  display: grid;
+			  grid-template-columns: 1fr 1fr;
+			  grid-gap: 1em;
+		  }
+		  .questions {
+			  display: grid;
+			  grid-template-columns: 1fr 1fr;
+			  grid-gap: 1em 1em;
+		  }
+		  .header {
+			  display: flex;
+			  justify-content: space-between;
+			  margin-bottom: 1em;
+		  }
+		  .description {
+			  margin-bottom: 0.5em;
+			  font-weight: bold;
+		  }
+		  body {
+			font-size: 12px;
+		  }
+		</style>
+	  </head>
+	  <body>
+		<div class='header'>
+		  <strong>Nombre y Apellido _____________________________________________ </strong>
+		  <strong>Evaluación número</strong>
+		  <strong>Tema:" $nro_tema " </strong>
+		</div>
+		<div class='questions'>
+		  "for (int $i,$i<$cant_preguntas, $i++){
 		
-		"</div>"
-	  }
-	"</div> 
-  </body>
-</html>"
+			"<div class='question'>
+				<div class='number'>" echo $i"</div>
+				
+			<div class='description'>"echo $array_descripcion"</div>"
+				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
+					"<div class='options short'>
+					<div class='option'>"echo $array_respuestas"</div>
+					</div>"
+				}
+			
+			"</div>"
+		  }
+		"</div> 
+	  </body>
+	</html>"
 		
 	}
 
     public function plantilla_profesor($preguntas, $cant_preguntas, $nro_tema){
-		<html>
-			<head>
-				<meta charset='UTF-8'/>
-				<meta name='viewport' content='with=device-width; initial-sacle=1.0' />
-				<title> Examen </title>
-			</head>
-		
-				echo '<h1>Tema: " $nro_tema " </h1>'
-				<ul>
-				<?php foreach ($arraydescripcion as $array_descripcion): ?>
-					<div>
-						<li><?php echo $array_descripcion ?></li>
-						<li><?php echo $array_respuestas ?></li>
-					</div>
-				<?php endforeach; ?>
+	 echo "<html>
+	  <head>
+		<title>Exam</title>
+		<meta charset='utf-8'>
+		<meta name='description' content="">
+		<meta name=viewport content='width=device-width, initial-scale=1'>
 
-		</html>
-	}
+		<style>
+		  .question {
+			  border: 1px solid gray;
+			  padding: 0.3em;
+		  }
+		  .number {
+			  float: left;
+			  margin-right: 0.5em;
+			  font-weight: bold;
+		  }
+		  .options {
+			  display: flex;
+			  flex-direction: column;
+		  }
+		  .short {
+			  display: grid;
+			  grid-template-columns: 1fr 1fr;
+			  grid-gap: 1em;
+		  }
+		  .questions {
+			  display: grid;
+			  grid-template-columns: 1fr 1fr;
+			  grid-gap: 1em 1em;
+		  }
+		  .header {
+			  display: flex;
+			  justify-content: space-between;
+			  margin-bottom: 1em;
+		  }
+		  .description {
+			  margin-bottom: 0.5em;
+			  font-weight: bold;
+		  }
+		  body {
+			font-size: 12px;
+		  }
+		</style>
+	  </head>
+	  <body>
+		<div class='header'>
+		  <strong>Nombre y Apellido _____________________________________________ </strong>
+		  <strong>Evaluación número</strong>
+		  <strong>Tema:" $nro_tema " </strong>
+		</div>
+		<div class='questions'>
+		  "for (int $i,$i<$cant_preguntas, $i++){
+		
+			"<div class='question'>
+				<div class='number'>" echo $i"</div>
+				
+			<div class='description'>"echo $array_descripcion"</div>"
+				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
+					"<div class='options short'>
+					<div class='option'>"echo $array_respuestas"</div>
+					</div>"
+				}
+			
+			"</div>"
+		  }
+		"</div> 
+	  </body>
+	</html>"}
     }
 }

@@ -9,8 +9,8 @@ class Plantilla {
 	  <head>
 		<title>Exam</title>
 		<meta charset='utf-8'>
-		<meta name='description' content="">
-		<meta name=viewport content='width=device-width, initial-scale=1'>
+		<meta name='description' content=''>
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
 
 		<style>
 		  .question {
@@ -55,26 +55,25 @@ class Plantilla {
 		  <strong>Nombre y Apellido _____________________________________________ </strong>
 		  <strong>Evaluaci�n n�mero</strong>
 		  <strong>Tema:". $nro_tema ." </strong>
-		</div>
-		<div class='questions'>";
+		</div>";
 
-		  for (int $i,$i<$cant_preguntas, $i++){
+		  for ($i=0;$i<$cant_preguntas; $i++){
 		
-			"<div class='question'>
-				<div class='number'>" echo $i;"</div>
+				echo "<div class='question'>
+				<div class='number'>" . $i ."</div>
 				
-			<div class='description'>"echo $array_descripcion;"</div>"
+			<div class='description'>".$array_descripcion."</div>";
 				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
-					"<div class='options short'>
-					<div class='option'>"echo $array_respuestas;"</div>
-					</div>"
+					echo "<div class='options short'>
+					<div class='option'>". $array_respuestas."</div>
+					</div>";
 				}
 			
-			"</div>"
+		echo	"</div>";
 		  }
-		"</div> 
+	echo	"</div> 
 	  </body>
-	</html>"
+	</html>";
 	}
 
     public function plantilla_profesor($preguntas, $cant_preguntas, $nro_tema){
@@ -82,7 +81,7 @@ class Plantilla {
 	  <head>
 		<title>Exam</title>
 		<meta charset='utf-8'>
-		<meta name='description' content="">
+		<meta name='description' content=''>
 		<meta name=viewport content='width=device-width, initial-scale=1'>
 
 		<style>
@@ -128,25 +127,23 @@ class Plantilla {
 		  <strong>Nombre y Apellido _____________________________________________ </strong>
 		  <strong>Evaluaci�n n�mero</strong>
 		  <strong>Tema:" .$nro_tema." </strong>
-		</div>
-		<div class='questions'>;"
-		  for (int $i,$i<$cant_preguntas, $i++){
+		</div>";
+		  for ($i=0;$i<$cant_preguntas; $i++){
 		
-			"<div class='question'>
-				<div class='number'>" echo $i;"</div>
-				"echo preguntas[$i]['respuestas_correctas'];"
-			<div class='description'>"echo $array_descripcion;"</div>"
+				echo "<div class='question'>
+				 <div class='number'>". $i."</div>".$preguntas[$i]['respuestas_correctas']."<div class='description'>". $array_descripcion."</div>";
 				
 				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
-					"<div class='options short'>
-					<div class='option'>"echo $array_respuestas;"</div>
-					</div>"
+					echo "<div class='options short'>
+					<div class='option'>". $array_respuestas."</div>";
 				}
 			
-			"</div>"
+		echo	"</div>";
 		  }
-		"</div> 
+	echo	"</div> 
 	  </body>
-	</html>"}
-    }
+	</html>";
 }
+
+}
+    

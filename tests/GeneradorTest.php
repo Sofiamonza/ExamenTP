@@ -85,8 +85,8 @@ class GeneradorTest extends TestCase{
         $cantPreguntas = 10;
         $generador = new Generador($yaml, $cantPreguntas);
         
-        $generador->CantPreguntas();
-        $aux = $generador->MostrarArrayPreguntas();
+        
+        $aux = $generador->CantPreguntas();
 
         $this->assertEquals(10,count($aux));
 

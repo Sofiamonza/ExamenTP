@@ -2,7 +2,7 @@
 
 namespace ExamenTP;
 
-require 'autoload.php';
+require '../vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
 

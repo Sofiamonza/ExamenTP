@@ -53,12 +53,10 @@ class Plantilla {
 	  <body>
 		<div class='header'>
 		  <strong>Nombre y Apellido _____________________________________________ </strong>
-		  <strong>Evaluación número</strong>
-		  <strong>Tema:". $nro_tema ." </strong>
-		</div>
-		<div class='questions'>";
+		  <strong>Evaluaciï¿½n nï¿½mero</strong>
+		  <strong>Tema:". $nro_tema ." </strong></div><div class='questions'>";
 
-		  for (int $i,$i<$cant_preguntas, $i++){
+		  for ($i=0,$i<$cant_preguntas, $i++){
 		
 			"<div class='question'>
 				<div class='number'>" echo $i;"</div>
@@ -126,7 +124,7 @@ class Plantilla {
 	  <body>
 		<div class='header'>
 		  <strong>Nombre y Apellido _____________________________________________ </strong>
-		  <strong>Evaluación número</strong>
+		  <strong>Evaluaciï¿½n nï¿½mero</strong>
 		  <strong>Tema:" .$nro_tema." </strong>
 		</div>
 		<div class='questions'>;"
@@ -134,7 +132,7 @@ class Plantilla {
 		
 			"<div class='question'>
 				<div class='number'>" echo $i;"</div>
-				"echo preguntas[$i]['respuestas_correctas'];"
+				"echo $preguntas[$i]['respuestas_correctas'];"
 			<div class='description'>"echo $array_descripcion;"</div>"
 				
 				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){

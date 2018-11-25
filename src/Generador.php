@@ -69,7 +69,7 @@ class Generador {
     public function CrearTema($nro_tema, Plantilla $html){
         $this->preguntas = $this->MezclarPreguntas();
         $this->preguntas = $this->CantPreguntas();
-        $this->RespuestasGenerales($this->cant_preguntas);
+        $this->RespuestasGenerales();
         $this->array_descripcion = $this->Descripciones();
         for($i=0; $i < $this->cant_preguntas; $i++)
         {   //con el shuffle mezclo las respuestas totales

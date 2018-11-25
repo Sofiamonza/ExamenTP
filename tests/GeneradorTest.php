@@ -79,11 +79,27 @@ class GeneradorTest extends TestCase{
 
     
     public function testCantPreguntas(){
-                                     
+        $yaml = Yaml::parseFile('./src/material/preguntas.yml');
+        $yaml = $yaml['preguntas'];
+
+        $cantPreguntas = 10;
+        $generador = new Generador($yaml, $cantPreguntas);
+        
+        $generador->CantPreguntas();
+        $aux = $generador->MostrarArrayPreguntas();
+
+        $this->assertEquals(10,count($aux));
+
+
     }
 
     
     public function testCrearTema(){
         
+    }
+
+    //No sé sie ste test es necesario
+    public function testMostrarArrayPreguntas(){
+
     }
 }

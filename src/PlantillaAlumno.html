@@ -1,0 +1,31 @@
+<html>
+
+<?php
+class PlantillaAlumno {
+    public function plantilla_alumno($cant_preguntas, $array_respuestas, $array_descripcion, $nro_tema){
+		$arrayD = array();
+			foreach ($array_descripcion as $array_description) {
+			$arrayD[] = $array_descripcion;
+			}
+    } 
+  
+}
+?>
+
+<h1>Examen</h1>
+  <strong>Tema:<?= $nro_tema ?></strong>
+
+<ul>
+<?php foreach ($arrayD as $array_descripcion): ?>
+    
+<div>
+	<li><?php echo $array_descripcion ?></li>
+	<?php foreach ($arrayR as $array_respuestas): ?>
+		<li><?php echo $array_respuestas ?></li>
+</div>
+		
+<?php endforeach; ?>
+
+</ul>
+    
+</html>

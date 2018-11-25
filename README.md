@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Sofiamonza/ExamenTP.svg?branch=master)](https://travis-ci.org/Sofiamonza/ExamenTP)
 [![Coverage Status](https://coveralls.io/repos/github/Sofiamonza/ExamenTP/badge.svg?branch=master)](https://coveralls.io/github/Sofiamonza/ExamenTP?branch=master)
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Sofiamonza/ExamenTP/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Sofiamonza/ExamenTP/?branch=master)
 
 # Integrantes: Gilio, Monza.
 

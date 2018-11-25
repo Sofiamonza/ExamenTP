@@ -18,11 +18,11 @@ class Generador {
 		for($i=0; $i < $this->cant_preguntas; $i++ )
 		{
 			if($this->preguntas[$i]['respuestas_correctas'] == []){
-				$this->preguntas[$i]['respuestas_correctas'] = 'Ninguna de las anteriores';
+				$this->preguntas[$i]['respuestas_correctas'] = ['Ninguna de las anteriores'];
 			}
 			if($this->preguntas[$i]['respuestas_incorrectas'] == []){
 				$this->preguntas[$i]['respuestas_incorrectas'] = array_merge($this->preguntas[$i]['respuestas_correctas'], $this->preguntas[$i]['respuestas_incorrectas']);
-				$this->preguntas[$i]['respuestas_correctas'] = 'Todas las anteriores';
+				$this->preguntas[$i]['respuestas_correctas'] = ['Todas las anteriores'];
 			}
 		}
 	}

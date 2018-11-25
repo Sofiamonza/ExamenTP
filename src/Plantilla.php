@@ -60,12 +60,14 @@ class Plantilla {
 		  for ($i=0;$i<$cant_preguntas; $i++){
 		
 				echo "<div class='question'>
-				<div class='number'>" . $i ."</div>
+				<div class='number'>" . $i .")</div>
 				
-			<div class='description'>".$array_descripcion."</div>";
-				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
+			<div class='description'>".$array_descripcion[$i] ."</div>";
+			$aux=$array_respuestas[$i];
+				for ($j=0; $j < count($aux); $j++){
+					$valor=$aux[$j];
 					echo "<div class='options short'>
-					<div class='option'>". $array_respuestas."</div>
+					<div class='option'>". $j. ") ". $valor."</div>
 					</div>";
 				}
 			
@@ -131,12 +133,14 @@ class Plantilla {
 		  for ($i=0;$i<$cant_preguntas; $i++){
 		
 				echo "<div class='question'>
-				 <div class='number'>". $i."</div>".$preguntas[$i]['respuestas_correctas']."<div class='description'>". $array_descripcion."</div>";
+				 <div class='number'>". $i.") </div><div class='description'>". $preguntas[$i]['descripcion']."</div>";
 				
-				foreach ($array_respuestas[$i] as $arrayrespuestas[$i]){
-					echo "<div class='options short'>
-					<div class='option'>". $array_respuestas."</div>";
-				}
+				 for ($j=0; $j < count($preguntas[$i]['respuestas_correctas']); $j++){
+					 $valor=$preguntas[$i]['respuestas_correctas'][$j];
+					 echo "<div class='options short'>
+					 <div class='option'> Respuesta correcta:". $valor."</div>
+					 </div>";
+				 }
 			
 		echo	"</div>";
 		  }

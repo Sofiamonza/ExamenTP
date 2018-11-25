@@ -73,7 +73,9 @@ class Generador {
         $this->array_descripcion = $this->Descripciones();
         for($i=0; $i < $this->cant_preguntas; $i++)
         {   //con el shuffle mezclo las respuestas totales
-            $this->array_respuestas[$i]= shuffle($this->RespuestasTotales($this->preguntas[$i]));
+            $aux=$this->RespuestasTotales($this->preguntas[$i]);
+            shuffle($aux);
+            $this->array_respuestas[$i]=$aux;
         }
         $html->plantilla_alumno($this->cant_preguntas, $this->array_respuestas, $this->array_descripcion, $nro_tema);
         $html->plantilla_profesor($this->preguntas, $this->cant_preguntas, $nro_tema);

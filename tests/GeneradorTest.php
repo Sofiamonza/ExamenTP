@@ -21,11 +21,11 @@ class GeneradorTest extends TestCase{
 
         for($i=0; $i < $cantidad_preguntas; $i++ )
         {
-            if ($aux [$i]['respuestas_correctas']== 'Todas las anteriores')
+            if ($aux [$i]['respuestas_correctas']== ['Todas las anteriores'])
             {
                 $bandera = true;
             }
-            if ($aux [$i]['respuestas_correctas']== 'Ninguna de las anteriores')
+            if ($aux [$i]['respuestas_correctas']== ['Ninguna de las anteriores'])
             {
                 $bandera = true;
             }
